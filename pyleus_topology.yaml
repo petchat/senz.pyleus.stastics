@@ -1,0 +1,22 @@
+name: stastics
+
+topology:
+
+    - spout:
+        name: first_spout
+        type: kafka
+        options:
+            topic: test
+            module: stastics.first_spout
+            zk_hosts: 119.254.111.40:2181/kafka/q-63lnrnga
+            zk_root: /pyleus-kafka-offsets/stastics
+            consumer_id: stastics
+            from_start: false
+            start_offset_time: 2147483648
+            binary_data: true
+
+    - bolt:
+        name: first_bolt
+        module: stastics.first_bolt
+        groupings:
+            - shuffle_grouping: first_spout
