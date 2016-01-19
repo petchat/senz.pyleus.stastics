@@ -1,10 +1,8 @@
 import json
 from dao import *
-from pymongo import MongoClient
 from pyleus.storm import SimpleBolt
 
 log = logging.getLogger("stastics_logger.first_bolt")
-RefinedLog = MongoClient('mongodb://senzhub:Senz2everyone@119.254.111.40/RefinedLog')
 
 
 class MotionBolt(SimpleBolt):
