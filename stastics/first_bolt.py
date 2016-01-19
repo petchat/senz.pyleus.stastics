@@ -11,9 +11,9 @@ class MotionBolt(SimpleBolt):
             obj = json.loads(v)
             user_id = obj.get('user_id')
             motion = obj.get('motionProb') or {}
-            timestamp = obj.get('timestamp') or ""
+            # timestamp = obj.get('timestamp') or ""
             log.info("[ %r ] Motion: %r", user_id, motion.items())
-            push_motion(user_id, timestamp=timestamp, motion=motion)
+            # push_motion(user_id, timestamp=timestamp, motion=motion)
 
 
 if __name__ == '__main__':
