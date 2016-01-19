@@ -18,10 +18,10 @@ class MotionBolt(SimpleBolt):
             log.info("[ %r ] Motion: %r", user_id, motion.items())
 
 
-# if __name__ == '__main__':
-#     MotionBolt().run()
-
-
 if __name__ == '__main__':
-    forTest = RefinedLog.get_default_database().ForTest
-    print forTest.count()
+    MotionBolt().run()
+
+
+# if __name__ == '__main__':
+#     forTest = RefinedLog.get_default_database().ForTest
+#     print forTest.count()
