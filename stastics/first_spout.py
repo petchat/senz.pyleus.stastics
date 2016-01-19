@@ -8,7 +8,6 @@ log = logging.getLogger("stastics_logger.first_spout")
 class LineSpout(Spout):
     def next_tuple(self, tup):
         self.emit(tup)
-        log.info("Emitted: %r", tup)
 
 
 if __name__ == '__main__':

@@ -12,14 +12,9 @@ class MotionBolt(SimpleBolt):
             user_id = obj.get('user_id')
             motion = obj.get('motionProb') or {}
             timestamp = obj.get('timestamp') or None
-            log.info("[ %r ] Motion: %r", user_id, motion.items())
             push_motion(user_id, timestamp=timestamp, motion=motion)
 
 
 if __name__ == '__main__':
     MotionBolt().run()
 
-
-# if __name__ == '__main__':
-#     forTest = RefinedLog.get_default_database().ForTest
-#     print forTest.count()
