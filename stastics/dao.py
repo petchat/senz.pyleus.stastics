@@ -7,18 +7,15 @@ log = logging.getLogger("stastics_logger.first_spout")
 
 
 def push_motion(uid, **kwargs):
-    print uid
     for k, v in kwargs.items():
-        print k, v
+        log.info("[%r] %r: %r", uid, k, v)
 
 
 def push_event(uid, **kwargs):
-    print uid
     for k, v in kwargs.items():
-        print k, v
+        log.info("[%r] %r: %r", uid, k, v)
 
 
 def push_location(uid, **kwargs):
-    print uid
     for k, v in kwargs.items():
-        print k, v
+        log.info("[%r] %r: %r", uid, k, v)
